@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            width: 100%;
+            background-color: orangered;
+            z-index: 1000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            display: flex;
+            padding: 10px 20px;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #home {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-top: 80px; /* Creates space between header and image */
+        }
+
+        nav a {
+            margin-right: 60px;
+        }
+
+        button:hover {
+            background-color: red;
+        }
+
+        nav {
+            display: flex;
+        }
+
+        #logo {
+            color: white;
+            font-size: 30px;
+        }
+
+        /* Optional: Styling for the image */
+        #home img {
+            height: 300px;
+            width: 500px;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3); /* Shadow effect */
+            border-radius: 10px; /* Optional: Adds rounded corners to the image */
+        
+        }
+        #online {
+           align-items: center;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3); /* Shadow effect */
+            border-radius: 10px; /* Optional: Adds rounded corners to the image */
+        
+        }
+    </style>
+</head>
+<body style="background-color: bisque;">
+    <header>
+        <div id="logo"><h4>Welcome Sai Kiran</h4></div>
+        <nav>
+            <a href="#home">
+                <button style="background-color: navy; color: white; height: 40px; width: 80px; border-radius: 10px; border: none; cursor: pointer;">Home</button>
+            </a>
+            <a href="#projects">
+                <button style="background-color: navy; color: white; height: 40px; width: 80px; border-radius: 10px; cursor: pointer;">Projects</button>
+            </a>
+            <a href="#services">
+                <button style="background-color: navy; color: white; height: 40px; width: 80px; border-radius: 10px; cursor: pointer;">Services</button>
+            </a>
+            <a href="#about">
+                <button style="background-color: navy; color: white; height: 40px; width: 80px; border-radius: 10px; cursor: pointer;">About Me</button>
+            </a>
+            <a href="#contact">
+                <button style="background-color: navy; color: white; height: 40px; width: 80px; border-radius: 10px; cursor: pointer;">Contact</button>
+            </a>
+        </nav>
+    </header>
+<br><br><br><br><br>
+    <!-- Home section with added padding-top to avoid overlap with fixed header -->
+    <div id="home">
+        
+      <!-- <h1 style="color: navy; text-align: center;">Welcome To My Portfolio...</h1><br><br><br><br> -->
+      <img src="l.jpg" alt="laptop" height="200" width="400"><br><br>
+    </div>
+    <div id="projects">
+        <h1 style="color: orangered; text-align: center;">PROJECTS
+            <center>
+<h3 style="color: navy; text-align: center;">Online Store</h3>
+<a href="index.html">
+    <img src="os.jpg" alt="Description of the image" id="online" height="100" width="80"/></center>
+</a>
+
+<p><h4>An online store is a digital platform that allows businesses to sell products or services directly to customers over the internet. Customers can browse through various categories, view product details, and make purchases using secure payment methods. Online stores offer the convenience of shopping from home, with the ability to compare prices and read reviews before making a decision. Many online retailers also provide fast delivery services, making it easier for customers to receive their items quickly. As e-commerce continues to grow, online stores are becoming an increasingly popular way for businesses to reach a global audience.</h4>
+</p>
+    </div>
+    <div id="services">
+        <h1 style="color: orangered; text-align: center;">SERVICES
+            <h1 style="color: navy; text-align: center;">Web Development</h1>
+            <p><h4>Web development is the process of building and maintaining websites and web applications. It includes both front-end development (the visual elements users interact with) and back-end development (the server-side logic that powers the site). Front-end development typically involves HTML, CSS, and JavaScript, while back-end development may use languages like Python, Ruby, or PHP. Web developers ensure that websites are responsive, fast, and secure for optimal user experience. With the growth of mobile browsing, modern web development often involves creating mobile-friendly designs and integrating with various APIs.</h4></p>
+            <h1 style="color: navy; text-align: center;">App Development</h1>
+            <p><h4>App development refers to creating software applications designed for mobile devices, such as smartphones and tablets. It involves writing code for platforms like iOS (using Swift or Objective-C) and Android (using Java or Kotlin). App developers focus on user interface (UI) and user experience (UX) to create intuitive, easy-to-use applications. Mobile apps can range from simple tools to complex solutions, offering functionalities like gaming, e-commerce, social networking, and more. With increasing mobile usage, app development has become a vital part of digital innovation, driving business growth and enhancing consumer engagement.</h4></p>
+        </div>
+        <hr>
+        <div id="about">
+            <h1 style="color: orangered; text-align: center;">ABOUT ME
+                <h1 style="color: navy; text-align: center;">Skills:</h1>
+                <ul><li><h4>Java</h4></li></ul>
+                <ul><li><h4>Python</h4></li></ul>
+                <ul><li><h4>Hyper Text Markup Language</h4></li></ul>
+                <ul><li><h4>Cascading Style Sheets</h4></li></ul>
+                <ul><li><h4>Java Script</h4></li></ul>
+
+        </div>
+        <hr>
+        <div id="contact">
+            <h1 style="color: orangered; text-align: center;">CONTACT ME
+                <br><br>
+                <a href="mailto:obalisaikiran77@gmail.com">
+                    <img src="email.jpg" alt="Email Icon" height="40" width="40" />
+                </a>
+                <a href="https://github.com/saikiranobali45/saikiranobali45.github.io">
+                    <img src="git.png" alt="Description of the image" height="40" width="40"/>
+                </a>
+                <hr>
+                <br>
+                
+                <footer id="f">
+                    <p><h6>&copy; 2024Saikiran. All rights reserved.</h6></p>
+                </footer>
+                
+        </div>
+</body>
+</html>
