@@ -1,138 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        header {
-            width: 100%;
-            background-color: orangered;
-            z-index: 1000;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            display: flex;
-            padding: 10px 20px;
-            justify-content: space-between;
-            align-items: center;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Hello Saikiran's Portfolio</title>
+  <style>
+    /* General Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-        #home {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding-top: 80px; /* Creates space between header and image */
-        }
+    /* Body and Layout */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #f4f4f4;
+      color: #333;
+    }
 
-        nav a {
-            margin-right: 60px;
-        }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px 0;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1000;
+    }
 
-        button:hover {
-            background-color: red;
-        }
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
 
-        nav {
-            display: flex;
-        }
+    .logo {
+      font-size: 24px;
+    }
 
-        #logo {
-            color: white;
-            font-size: 30px;
-        }
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
 
-        /* Optional: Styling for the image */
-        #home img {
-            height: 300px;
-            width: 500px;
-            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3); /* Shadow effect */
-            border-radius: 10px; /* Optional: Adds rounded corners to the image */
-        
-        }
-        #online {
-           align-items: center;
-            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3); /* Shadow effect */
-            border-radius: 10px; /* Optional: Adds rounded corners to the image */
-        
-        }
-    </style>
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 18px;
+    }
+
+    nav ul li a:hover {
+      color: #ff6347;
+    }
+
+    /* Sections */
+    section {
+      padding: 80px 20px;
+      margin-top: 80px; /* To avoid overlap with the fixed header */
+    }
+
+    h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .project-list {
+      display: flex;
+      gap: 20px;
+    }
+
+    .project {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      flex: 1;
+    }
+
+    .project h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .project a {
+      color: #ff6347;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .project a:hover {
+      text-decoration: underline;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    form label {
+      margin: 10px 0 5px;
+    }
+
+    form input, form textarea {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    form button {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #ff6347;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 10px 0;
+      background-color: #333;
+      color: #fff;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
 </head>
-<body style="background-color: bisque;">
-    <header>
-        <div id="logo"><h4>Welcome Sai Kiran</h4></div>
-        <nav>
-            <a href="#home">
-                <button style="background-color: navy; color: white; height: 40px; width: 80px; border-radius: 10px; border: none; cursor: pointer;">Home</button>
-            </a>
-            <a href="#projects">
-                <button style="background-color: navy; color: white; height: 40px; width: 80px; border-radius: 10px; cursor: pointer;">Projects</button>
-            </a>
-            <a href="#services">
-                <button style="background-color: navy; color: white; height: 40px; width: 80px; border-radius: 10px; cursor: pointer;">Services</button>
-            </a>
-            <a href="#about">
-                <button style="background-color: navy; color: white; height: 40px; width: 80px; border-radius: 10px; cursor: pointer;">About Me</button>
-            </a>
-            <a href="#contact">
-                <button style="background-color: navy; color: white; height: 40px; width: 80px; border-radius: 10px; cursor: pointer;">Contact</button>
-            </a>
-        </nav>
-    </header>
-<br><br><br><br><br>
-    <!-- Home section with added padding-top to avoid overlap with fixed header -->
-    <div id="home">
-        
-      <!-- <h1 style="color: navy; text-align: center;">Welcome To My Portfolio...</h1><br><br><br><br> -->
-      <img src="l.jpg" alt="laptop" height="200" width="400"><br><br>
-    </div>
-    <div id="projects">
-        <h1 style="color: orangered; text-align: center;">PROJECTS
-            <center>
-<h3 style="color: navy; text-align: center;">Online Store</h3>
-<a href="index1.html">
-    <img src="os.jpg" alt="Description of the image" id="online" height="100" width="80"/></center>
-</a>
+<body>
 
-<p><h4>An online store is a digital platform that allows businesses to sell products or services directly to customers over the internet. Customers can browse through various categories, view product details, and make purchases using secure payment methods. Online stores offer the convenience of shopping from home, with the ability to compare prices and read reviews before making a decision. Many online retailers also provide fast delivery services, making it easier for customers to receive their items quickly. As e-commerce continues to grow, online stores are becoming an increasingly popular way for businesses to reach a global audience.</h4>
-</p>
+  <header>
+    <div class="header-content">
+      <h1 class="logo">Hello Saikiran</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-    <div id="services">
-        <h1 style="color: orangered; text-align: center;">SERVICES
-            <h1 style="color: navy; text-align: center;">Web Development</h1>
-            <p><h4>Web development is the process of building and maintaining websites and web applications. It includes both front-end development (the visual elements users interact with) and back-end development (the server-side logic that powers the site). Front-end development typically involves HTML, CSS, and JavaScript, while back-end development may use languages like Python, Ruby, or PHP. Web developers ensure that websites are responsive, fast, and secure for optimal user experience. With the growth of mobile browsing, modern web development often involves creating mobile-friendly designs and integrating with various APIs.</h4></p>
-            <h1 style="color: navy; text-align: center;">App Development</h1>
-            <p><h4>App development refers to creating software applications designed for mobile devices, such as smartphones and tablets. It involves writing code for platforms like iOS (using Swift or Objective-C) and Android (using Java or Kotlin). App developers focus on user interface (UI) and user experience (UX) to create intuitive, easy-to-use applications. Mobile apps can range from simple tools to complex solutions, offering functionalities like gaming, e-commerce, social networking, and more. With increasing mobile usage, app development has become a vital part of digital innovation, driving business growth and enhancing consumer engagement.</h4></p>
-        </div>
-        <hr>
-        <div id="about">
-            <h1 style="color: orangered; text-align: center;">ABOUT ME
-                <h1 style="color: navy; text-align: center;">Skills:</h1>
-                <ul><li><h4>Java</h4></li></ul>
-                <ul><li><h4>Python</h4></li></ul>
-                <ul><li><h4>Hyper Text Markup Language</h4></li></ul>
-                <ul><li><h4>Cascading Style Sheets</h4></li></ul>
-                <ul><li><h4>Java Script</h4></li></ul>
+  </header>
 
-        </div>
-        <hr>
-        <div id="contact">
-            <h1 style="color: orangered; text-align: center;">CONTACT ME
-                <br><br>
-                <a href="mailto:obalisaikiran77@gmail.com">
-                    <img src="email.jpg" alt="Email Icon" height="40" width="40" />
-                </a>
-                <a href="https://github.com/saikiranobali45/saikiranobali45.github.io">
-                    <img src="git.png" alt="Description of the image" height="40" width="40"/>
-                </a>
-                <hr>
-                <br>
-                
-                <footer id="f">
-                    <p><h6>&copy; 2024Saikiran. All rights reserved.</h6></p>
-                </footer>
-                
-        </div>
+  <!-- Home Section -->
+  <section id="home">
+    <h2>Welcome to My Portfolio</h2>
+    <p>Hi, I'm Saikiran. A passionate web developer.</p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>My Projects</h2>
+    <div class="project-list">
+      <div class="project">
+        <h3>Online Store</h3>
+        <p>Created a fully functional e-commerce website using React, Node.js, and MongoDB. This project involved building a shopping cart, payment integration, and a user authentication system.</p>
+        <p><a href="https://your-project-link.com" target="_blank">View Project</a></p>
+      </div>
+      <div class="project">
+        <h3>Portfolio</h3>
+        <p>This portfolio website was built using HTML, CSS, and JavaScript to showcase my work and achievements. It is fully responsive and provides easy navigation to different sections.</p>
+        <p><a href="https://your-portfolio-link.com" target="_blank">View Project</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services">
+    <h2>My Services</h2>
+    <p>I offer web development services including front-end and back-end development, responsive design, and website maintenance.</p>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I'm a web developer with a strong passion for building user-friendly websites. I have experience working with various web technologies, including HTML, CSS, JavaScript, and frameworks like React and Node.js. I strive to create clean, efficient code and deliver high-quality work.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>If you'd like to get in touch, feel free to reach out via email or through the form below:</p>
+    <form>
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Your Message:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Hello Saikiran. All rights reserved.</p>
+  </footer>
+
 </body>
 </html>

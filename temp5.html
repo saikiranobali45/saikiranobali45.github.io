@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .h3 {
+            background: linear-gradient(yellow, orange);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            color: navy;
+            width: 100%;
+        }
+
+        .h3 h3 {
+            flex: 1;
+            text-align: center;
+            margin: 0;
+        }
+
+        .links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .links a {
+            text-decoration: none;
+            color: navy;
+            font-weight: bold;
+        }
+
+        .links a:hover {
+            color: tomato;
+        }
+
+        .row {
+            background-color: beige;
+            padding: 15px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            align-items: center;
+            height: 100%;
+            margin-top: 50px;
+            border-color: navy;
+        }
+
+        .box {
+            margin: 15px;
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            width: 400px;
+            height: 160px;
+            border: 5px solid navy;
+            background: linear-gradient(to bottom right, orangered, yellow);
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            height: 100%;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .center-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .center-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            border: 10px solid white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .text-overlay {
+            position: absolute;
+            color: white;
+            font-size: 3rem;
+            text-align: center;
+            z-index: 2;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="h3">
+        <h3 style="text-decoration: double;">My Portfolio</h3>
+        <div class="links">
+            <a href="#">Home</a>
+            <a href="#">Projects</a>
+            <a href="#">Services</a>
+            <a href="#">Contact Us</a>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="center-image">
+        <img src="/img/lapp.jpg" alt="Laptop">
+        <div class="text-overlay">
+            <h1>Full Stack Web Development</h1>
+            <p>HTML | CSS | JS | MERN</p>
+        </div>
+    </div>
+    <br>
+<div id="fs">
+    <fieldset style="color: black; border: 5px solid black; border-radius: 10px;"><legend><h1 style="color: black;">PROJECTS</h1></legend>
+    <div class="row">
+        <div class="box">
+            <h2 style="background-color: red; width: 180px; border-radius: 20px; text-align: center;">Online Store</h2><br>
+            <p><h4 style="color: navy;">Explore The Items</h4></p><br>
+            <a href="index.html">View Project</a>
+        </div>
+        <div class="box">
+            <h2 style="background-color: red; width: 180px; border-radius: 20px; text-align: center;">Portfolio</h2><br>
+            <p><h4 style="color: navy;">My Bio</h4></p><br>
+            <a href="#">View Project</a>
+        </div>
+        <div class="box">
+            <h2 style="background-color: red; width: 180px; border-radius: 20px; text-align: center;">Game Store</h2><br>
+            <p><h4 style="color: navy;">Have Fun Time</h4></p><br>
+            <a href="#">View Project</a>
+        </div>
+    </div>
+</div>
+</fieldset>
+    <div class="footer">
+        <h3>@Copyright 2024, All rights reserved</h3>
+    </div>
+</body>
+</html>
