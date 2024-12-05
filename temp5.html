@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        /* Existing styles */
         * {
             margin: 0;
             padding: 0;
@@ -42,6 +43,40 @@
             color: tomato;
         }
 
+        .submenu {
+            position: relative;
+            display: inline;
+        }
+
+        .submenu a {
+            background-color: orangered;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        .submenu-content {
+            display: none;
+            position: absolute;
+            background-color: orangered;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .submenu:hover .submenu-content {
+            display: block;
+        }
+
+        .submenu-content a {
+            color: navy;
+            padding: 8px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .submenu-content a:hover {
+            background-color: #ddd;
+        }
+
         .row {
             background-color: beige;
             padding: 15px;
@@ -55,7 +90,7 @@
             border-color: navy;
         }
 
-        .box {
+        .box1, .box2, .box3 {
             margin: 15px;
             padding: 20px;
             border-radius: 15px;
@@ -64,6 +99,12 @@
             height: 160px;
             border: 5px solid navy;
             background: linear-gradient(to bottom right, orangered, yellow);
+            transition: transform 0.5s ease-in-out;
+            transform-origin: center center;
+        }
+
+        .box1:hover, .box2:hover, .box3:hover {
+            transform: scale(1.1, 1.1);
         }
 
         .footer {
@@ -108,16 +149,61 @@
             z-index: 2;
         }
 
+        #one {
+            width: 100%;
+            background-color: yellow;
+            padding: 0;
+            margin: 0;
+        }
+
+        #fs1 {
+            width: 100%;
+            padding: 20px 0;
+        }
+
+        fieldset {
+            width: 100%;
+            border: 5px solid black;
+            border-radius: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        #ser
+        {
+            display: none;
+            position: absolute;
+            background-color: greenyellow;
+            height: 300px;
+            width: 400px;
+            border: 3px solid black;
+            border-radius: 20px;
+        }
+        li:hover #ser
+        {
+            display: block;
+        }
     </style>
 </head>
 <body>
 
     <div class="h3">
-        <h3 style="text-decoration: double;">My Portfolio</h3>
+        <h1 style="text-decoration: double;">My Portfolio</h1>
         <div class="links">
             <a href="#">Home</a>
-            <a href="#">Projects</a>
-            <a href="#">Services</a>
+            <div class="submenu">
+                <a href="#">Projects</a>
+                <div class="submenu-content">
+                    <a href="#p1">Project 1</a>
+                    <a href="#p2">Project 2</a>
+                    <a href="#p3">Project 3</a>
+                </div>
+            </div>
+            <a href="#ser">Services</a>
+            <div id="ser">
+                <h3>My Services Are:</h3>
+                <ul><li>Web Development</li></ul>
+                <ul><li>App Development</li></ul>
+            </div>
             <a href="#">Contact Us</a>
         </div>
     </div>
@@ -132,27 +218,36 @@
         </div>
     </div>
     <br>
-<div id="fs">
-    <fieldset style="color: black; border: 5px solid black; border-radius: 10px;"><legend><h1 style="color: black;">PROJECTS</h1></legend>
-    <div class="row">
-        <div class="box">
-            <h2 style="background-color: red; width: 180px; border-radius: 20px; text-align: center;">Online Store</h2><br>
-            <p><h4 style="color: navy;">Explore The Items</h4></p><br>
-            <a href="index.html">View Project</a>
-        </div>
-        <div class="box">
-            <h2 style="background-color: red; width: 180px; border-radius: 20px; text-align: center;">Portfolio</h2><br>
-            <p><h4 style="color: navy;">My Bio</h4></p><br>
-            <a href="#">View Project</a>
-        </div>
-        <div class="box">
-            <h2 style="background-color: red; width: 180px; border-radius: 20px; text-align: center;">Game Store</h2><br>
-            <p><h4 style="color: navy;">Have Fun Time</h4></p><br>
-            <a href="#">View Project</a>
+    <div id="one">
+        <div id="fs1">
+            <fieldset style="color: black; border: 5px solid black; border-radius: 10px;">
+                <legend><h1 style="color: black;">PROJECTS</h1></legend>
+                <div class="row">
+                    <div class="box1">
+                        <div id="p1">
+                            <h2 style="background-color: red; width: 180px; border-radius: 20px; text-align: center;">Online Store</h2><br>
+                            <p><h4 style="color: navy;">Explore The Items</h4></p><br>
+                            <a href="index.html">View Project</a>
+                        </div>
+                    </div>
+                    <div class="box2">
+                        <div id="p2">
+                            <h2 style="background-color: red; width: 180px; border-radius: 20px; text-align: center;">Portfolio</h2><br>
+                            <p><h4 style="color: navy;">My Bio</h4></p><br>
+                            <a href="#">View Project</a>
+                        </div>
+                    </div>
+                    <div class="box3">
+                        <div id="p3">
+                            <h2 style="background-color: red; width: 180px; border-radius: 20px; text-align: center;">Game Store</h2><br>
+                            <p><h4 style="color: navy;">Have Fun Time</h4></p><br>
+                            <a href="#">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
         </div>
     </div>
-</div>
-</fieldset>
     <div class="footer">
         <h3>@Copyright 2024, All rights reserved</h3>
     </div>
