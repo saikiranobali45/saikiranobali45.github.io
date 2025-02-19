@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #f0f2f5;
+        }
+        #slide {
+            height: auto;
+            width: 400px;
+            background-color: aliceblue;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+        #dob, #gender {
+            color: gray;
+            text-align: left;
+            margin-top: 10px;
+            font-size: 14px;
+            padding-left: 10px;
+        }
+        input, select {
+            width: 90%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+        }
+        button {
+            color: white;
+            background-color: rgb(8, 174, 8);
+            height: 40px;
+            width: 95%;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        #su h4 {
+            color: rgba(255, 0, 0, 0.789);
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Signup</title>
+</head>
+<body>
+    <h1 style="font-family: Arial, Helvetica, sans-serif; color: blue; text-align: center;">facebook</h1>
+
+    <div id="slide">
+        <h3>Create a new account</h3>
+        <p>It's quick and easy</p>
+        <hr>
+        <input type="text" placeholder="First Name" required>
+        <input type="text" placeholder="Surname" required>
+        <div id="dob">Date of birth:</div>
+        <input type="datetime-local">
+        <div id="gender">Gender:</div>
+        <select name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="transgender">Transgender</option>
+            <option value="rather_not_say">Rather Not To Say</option>
+        </select>
+        <br><br>
+        <button>Sign Up</button>
+        <div id="su">
+            <h4>Already a member? <a href="#">Login</a></h4>
+        </div>
+    </div>
+</body>
+</html>

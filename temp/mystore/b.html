@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* ... (All CSS styles from previous responses combined) ... */
+    </style>
+</head>
+<body>
+
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <h2>Smart Tutor</h2>
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Performance</a></li>
+                <li><a href="#">Students</a></li>
+                <li><a href="#">Guides</a></li>
+                <li><a href="#">Reports</a></li>
+            </ul>
+
+            <div class="settings-section">
+                <h3>Settings</h3>
+                <div class="theme-options">
+                    <button class="light" onclick="setTheme('light')">Light</button>
+                    <button class="dark" onclick="setTheme('dark')">Dark</button>
+                </div>
+                <a href="#">Logout</a>
+            </div>
+            <div class="profile-section">
+                <h3>Profile</h3>
+                <p><strong>Name:</strong> John Doe</p>
+                <p><strong>Email:</strong> john.doe@example.com</p>
+                <p><strong>Role:</strong> Tutor</p>
+
+            </div>
+        </div>
+
+        <div class="main-content">
+            <h1>Dashboard</h1>
+
+            <div class="dashboard-widgets">
+                <div class="widget" onclick="openModal('studentModal')">
+                    <h3>New Students</h3>
+                    <p>15</p>
+                </div>
+                <div class="widget" onclick="openModal('guideModal')">
+                    <h3>New Guides</h3>
+                    <p>5</p>
+                </div>
+                <div class="widget">
+                    <h3>No. of Students</h3>
+                    <p>150</p>
+                </div>
+                <div class="widget">
+                    <h3>No. of Guides</h3>
+                    <p>30</p>
+                </div>
+                <div class="widget">
+                    <h3>Performance History</h3>
+                    <p>View Details</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="studentModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('studentModal')">&times;</span>
+            <h2>New Student Details</h2>
+            <form>
+                <label for="studentName">Name:</label>
+                <input type="text" id="studentName" name="studentName">
+                <label for="studentGrade">Grade:</label>
+                <input type="text" id="studentGrade" name="studentGrade">
+                <label for="studentCollege">College:</label>
+                <input type="text" id="studentCollege" name="studentCollege">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="guideModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('guideModal')">&times;</span>
+            <h2>New Guide Details</h2>
+            <form>
+                <label for="guideName">Name:</label>
+                <input type="text" id="guideName" name="guideName">
+                <label for="guideSubject">Subject:</label>
+                <input type="text" id="guideSubject" name="guideSubject">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function setTheme(theme) {
+            // ... (Theme switching JavaScript from previous responses) ...
+        }
+
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
